@@ -12,7 +12,22 @@ from PIL import Image
 import requests
 from io import BytesIO
 
+import toolz
+import gensim
+import torch
+import nltk
+import cytoolz
+import pyrouge
+
+import time
+
+
 def main(args):
+    logging.info('Starting')
+    while True:
+        time.sleep(1)
+
+def oldmain(args):
     logging.info('model={}'.format(args.model))
     model = zoo.get_model(url=args.model)
     logging.info('finished acquiring model')
